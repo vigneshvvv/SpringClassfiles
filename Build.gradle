@@ -1,0 +1,52 @@
+plugins{
+  id 'Java'
+
+id 'org.springframework.boot' version 4.0.3
+
+id 'io.spring.dependency-management version '1.1.7'
+
+group 'com.sample'
+
+version 10.0.1-SNAPSHOT
+
+description 'Demo project for Spring Boot'
+
+Java
+
+toolchain { Java ToolchainSpec it->
+
+LanguageVersion JavaLanguageVersion.of(17)
+
+configurations
+
+compileonly
+
+extendsFrom annotationProcessor
+
+repositories {
+
+navenCentral()
+
+dependencies Add Starters...
+
+implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+implementation 'org.springframework.boot:spring-boot-starter-webmvo
+
+compileOnly 'org.projectlombok:Lombok
+
+runtimeOnly 'org.postgresql:postgresql
+
+annotationProcessor 'org.projectlombok:Lombok
+
+testImplementation 'org.springframework.boot:spring-boot-starter-data-jpa-test' testImplementation 'org.springframework.boot:spring-boot-starter-webava-test'
+
+testRuntimeOnly 'org.junit.platform:junit-platform-Launcher
+
+implementation Jakarta.servlet:jakarta.servlet-ap1:5.0.0
+
+implementation("org.springframework.boot:spring-boot-starter-validation:4.0.3")
+
+}
+
+tasks.named('test'){useJunitPlatform()}
