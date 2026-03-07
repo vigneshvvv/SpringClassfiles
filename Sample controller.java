@@ -71,15 +71,15 @@ return result.get();
 
 }
 
-return null;
+return null;}
 
 @GetMapping("/getByAge"
 
 public List<UserDetails> getByAge(@Valid @Min(1) @Max(108) @RequestParam int age)
+                                              {
 
-}
 
-return userService.getBYAge(age);
+return userService.getBYAge(age);}
 
 @GetMapping("/getUsersObject")
 
