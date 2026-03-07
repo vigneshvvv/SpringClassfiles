@@ -40,3 +40,51 @@ public String contact() { return "The contact is working fine";}
 public UserDetails postMethod(@RequestBody UserDetails userDetails)
 
 return userDetails;
+
+
+
+@GetMapping(@"/regTesting")
+
+public UserDetails reqTesting(@Valid @Min(1) @Max(100) @RequestParam int id){
+
+Optional<UserDetails> result = userService.getByIDExample(id);
+
+if (result.isPresent()){
+
+}
+
+return result.get();
+
+}
+
+return null;}
+
+@GetMapping("/getByUserName")
+
+public UserDetails getByUserName(@Valid @Size(min 1, max 100, message "the size is not valid") @RequestParam String userName) {
+
+Optional<UserDetails> result = userService.getByUserName (userName);
+
+if (result.isPresent()){
+
+return result.get();
+
+}
+
+return null;
+
+@GetMapping("/getByAge"
+
+public List<UserDetails> getByAge(@Valid @Min(1) @Max(108) @RequestParam int age)
+
+}
+
+return userService.getBYAge(age);
+
+@GetMapping("/getUsersObject")
+
+public Users getUserObject(){
+
+return userService.getUser();
+
+}
